@@ -11,14 +11,15 @@ class HomeView extends StatelessWidget {
           return Scaffold(
             extendBodyBehindAppBar: true,
             appBar: AppBar(
+              leading: IconButton(color: Colors.grey,onPressed: () => {Get.back()}, icon: Icon(Icons.arrow_back_ios),),
               elevation: 0,
               backgroundColor: Colors.transparent,
             ),
             body: controller.loading.value
                 ? Center(child: CircularProgressIndicator())
                 : ListView(
-                    children: controller.posts
-                        .map<Widget>((post) => Padding(
+                    children: controller.images
+                        .map<Widget>((image) => Padding(
                               padding: const EdgeInsets.all(12),
                               child: Container(
                                 decoration: BoxDecoration(
@@ -55,11 +56,11 @@ class HomeView extends StatelessWidget {
                                     ),
                                     Padding(
                                       padding: EdgeInsets.all(14),
-                                      child: Text(post.title),
+                                      child: Text(image.title),
                                     ),
                                     Padding(
                                       padding: EdgeInsets.all(14),
-                                      child: Image.network("${post.url}"),
+                                      child: Image.network("${image.url}"),
                                     )
                                   ],
                                 ),

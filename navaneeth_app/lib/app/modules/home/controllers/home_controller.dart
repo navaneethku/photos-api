@@ -7,20 +7,20 @@ class HomeController extends GetxController {
   @override
   void onReady() {
     super.onReady();
-    getPosts();
+    getImages();
   }
 
-  var posts = <ImageModel>[].obs;
+  var images = <ImageModel>[].obs;
   var loading = false.obs;
 
   PostsProvider _provider = PostsProvider();
 
-  getPosts() async {
+  getImages() async {
     loading(true);
-    var response = await _provider.getPosts();
+    var response = await _provider.getImages();
     print(response.bodyString!);
     if (!response.status.hasError) {
-      posts.value = imageModelFromJson(response.bodyString!);
+      images.value = imageModelFromJson(response.bodyString!);
     }
     loading(false);
   }
