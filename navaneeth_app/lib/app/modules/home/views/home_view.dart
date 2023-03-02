@@ -1,23 +1,73 @@
 import 'package:flutter/material.dart';
-
 import 'package:get/get.dart';
+import 'package:navaneeth_app/app/modules/home/controllers/home_controller.dart';
 
-import '../controllers/home_controller.dart';
-
-class HomeView extends GetView<HomeController> {
+class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(''),
-        centerTitle: true,
-      ),
-      body: Center(
-        child: Text(
-          'HomeView is working',
-          style: TextStyle(fontSize: 20),
-        ),
-      ),
-    );
+    return GetX<HomeController>(
+        init: HomeController(),
+        builder: (controller) {
+          return Scaffold(
+            extendBodyBehindAppBar: true,
+            appBar: AppBar(
+              elevation: 0,
+              backgroundColor: Colors.transparent,
+            ),
+            body: controller.loading.value
+                ? Center(child: CircularProgressIndicator())
+                : ListView(
+                    children: controller.posts
+                        .map<Widget>((post) => Padding(
+                              padding: const EdgeInsets.all(12),
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  shape: BoxShape.rectangle,
+                                  boxShadow: [
+                                    BoxShadow(
+                                      color: Colors.grey,
+                                      blurRadius: 15.0,
+                                      offset: Offset(
+                                        1.0,
+                                        5.0,
+                                      ),
+                                    )
+                                  ],
+                                ),
+                                child: Column(
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.end,
+                                        children: [
+                                          IconButton(
+                                              onPressed: () {},
+                                              icon: Icon(
+                                                Icons.more_horiz_rounded,
+                                                size: 30,
+                                                color: Colors.grey,
+                                              )),
+                                        ],
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: EdgeInsets.all(14),
+                                      child: Text(post.title),
+                                    ),
+                                    Padding(
+                                      padding: EdgeInsets.all(14),
+                                      child: Image.network("${post.url}"),
+                                    )
+                                  ],
+                                ),
+                              ),
+                            ))
+                        .toList(),
+                  ),
+          );
+        });
   }
 }
