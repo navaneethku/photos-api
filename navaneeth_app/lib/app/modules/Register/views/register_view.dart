@@ -60,7 +60,7 @@ class RegisterView extends GetView<RegisterController> {
                         ),
                       ),
                     ),
-                    Positioned.fill(
+                    Container(
                         child: Column(
                       children: [
                         Container(
@@ -119,8 +119,7 @@ class RegisterView extends GetView<RegisterController> {
                                     "Forgot Password?",
                                     textAlign: TextAlign.left,
                                   ),
-                                ),
-                                // Container(child: Text("HEllo")),
+                                ), // Container(child: Text("HEllo")),
                               ],
                             )),
                           ),
@@ -201,13 +200,35 @@ class RegisterView extends GetView<RegisterController> {
                               'REGISTER',
                               textAlign: TextAlign.right,
                               style: TextStyle(
-                                  color: Color(0xff1053b4),
+                                  color: Color(0xff1971b8),
                                   fontFamily: 'Open Sans',
                                   fontSize: 18,
                                   fontWeight: FontWeight.w500),
-                            ))
+                            )),
                       ],
-                    ))
+                    )),
+                    Positioned(
+                      bottom: 235,
+                      right: 35,
+                      child: Container(
+                        width: 80,
+                        height: 80,
+                        decoration: const BoxDecoration(
+                          color: Color.fromARGB(255, 84, 174, 247),
+                          shape: BoxShape.circle,
+                        ),
+                        child: IconButton(
+                          onPressed: () {
+                            Get.to(
+                              () => HomeView(),
+                            );
+                            Get.put(HomeController());
+                          },
+                          icon: const Icon(Icons.arrow_forward_ios),
+                          color: Colors.white,
+                        ),
+                      ),
+                    ),
                   ],
                 ),
               ),
