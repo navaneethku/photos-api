@@ -1,4 +1,5 @@
-# Flutter App which fetches data from photos api from jsonplaceholder api and presents them in a dynamic list. The app uses get_cli 1.6.0 architecture.
+# Photos-API app
+## The Photos-API app fetches data from the [jsonplaceholder's photos](https://jsonplaceholder.typicode.com/photos) api and presents them in a dynamic list. The app uses get_cli 1.6.0 architecture.
 
 ## How to Run
 ```flutter run file_name.dart```
