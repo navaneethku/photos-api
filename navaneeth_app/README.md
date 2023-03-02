@@ -1,16 +1,11 @@
-# navaneeth_app
+# Flutter App which fetches data from photos api from jsonplaceholder api and presents them in a dynamic list. The app uses get_cli 1.6.0 architecture.
 
-A new Flutter project.
+## How to Run
+```flutter run file_name.dart```
+## Screenshots
+### RegisterPage
+![Screenshot_2023_03_02_20_47_36_47_77ac996d06293de7dbe41c1abff1502e](https://user-images.githubusercontent.com/88205492/222470509-c4af1ae3-d26d-4fca-b152-323ff60a5b35.jpg)
 
-## Getting Started
+### HomePage
+![Screenshot_2023_03_02_20_47_44_50_77ac996d06293de7dbe41c1abff1502e](https://user-images.githubusercontent.com/88205492/222470498-9209fdb2-1900-40da-94a9-9cda4721612c.jpg)
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
