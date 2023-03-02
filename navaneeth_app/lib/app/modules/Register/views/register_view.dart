@@ -68,8 +68,8 @@ class RegisterView extends GetView<RegisterController> {
                           width: width - 50,
                         ),
                         Container(
-                          width: width - 30,
-                          height: height / 3,
+                          width: width - 20,
+                          height: height / 2.5,
                           padding: EdgeInsets.fromLTRB(10, 20, 10, 10),
                           decoration: BoxDecoration(
                               boxShadow: [
@@ -119,20 +119,18 @@ class RegisterView extends GetView<RegisterController> {
                                     "Forgot Password?",
                                     textAlign: TextAlign.left,
                                   ),
-                                ), // Container(child: Text("HEllo")),
+                                ),
+                                // Container(child: Text("HEllo")),
                               ],
                             )),
                           ),
                         ),
                         Container(
-                          height: height / 3.5,
+                          height: height / 5,
                           width: width,
                           child: Column(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
-                                SizedBox(
-                                  height: 40,
-                                ),
                                 Padding(
                                   padding: const EdgeInsets.all(8.0),
                                   child: Text(
