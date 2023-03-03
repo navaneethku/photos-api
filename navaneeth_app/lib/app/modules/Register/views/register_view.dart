@@ -114,7 +114,7 @@ class RegisterView extends GetView<RegisterController> {
                                 ),
                                 TextFormField(
                                   decoration: const InputDecoration(
-                                      labelText: "Pasword (Required)",
+                                      labelText: "Password (Required)",
                                       labelStyle: TextStyle(fontSize: 19)),
                                 ),
                                 Container(
