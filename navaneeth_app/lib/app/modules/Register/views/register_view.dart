@@ -69,7 +69,7 @@ class RegisterView extends GetView<RegisterController> {
                         ),
                         Container(
                           width: width - 20,
-                          height: height / 2.5,
+                          height: height / 3,
                           padding: EdgeInsets.fromLTRB(10, 20, 10, 10),
                           decoration: BoxDecoration(
                               boxShadow: [
@@ -124,6 +124,35 @@ class RegisterView extends GetView<RegisterController> {
                               ],
                             )),
                           ),
+                        ),
+                        Stack(children: [
+                          Positioned(
+                            child: Align(
+                              alignment: Alignment.bottomRight,
+                              heightFactor: 0.5,
+                              widthFactor: 4.5,
+                              child: Container(
+                                width: 80,
+                                height: 80,
+                                decoration: const BoxDecoration(
+                                  color: Color.fromARGB(255, 84, 174, 247),
+                                  shape: BoxShape.circle,
+                                ),
+                                child: IconButton(
+                                  onPressed: () {
+                                    Get.to(
+                                      () => HomeView(),
+                                    );
+                                  },
+                                  icon: const Icon(Icons.arrow_forward_ios),
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ]),
+                        SizedBox(
+                          height: 30,
                         ),
                         Container(
                           height: height / 5,
@@ -205,27 +234,6 @@ class RegisterView extends GetView<RegisterController> {
                             )),
                       ],
                     )),
-                    Positioned(
-                      bottom: 235,
-                      right: 35,
-                      child: Container(
-                        width: 80,
-                        height: 80,
-                        decoration: const BoxDecoration(
-                          color: Color.fromARGB(255, 84, 174, 247),
-                          shape: BoxShape.circle,
-                        ),
-                        child: IconButton(
-                          onPressed: () {
-                            Get.to(
-                              () => HomeView(),
-                            );
-                          },
-                          icon: const Icon(Icons.arrow_forward_ios),
-                          color: Colors.white,
-                        ),
-                      ),
-                    ),
                   ],
                 ),
               ),
