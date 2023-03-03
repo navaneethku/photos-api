@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import 'package:get/get.dart';
 
@@ -24,11 +25,12 @@ class RegisterView extends GetView<RegisterController> {
                 child: Stack(
                   children: [
                     Positioned(
-                      left: width / 5,
-                      bottom: width / 1.15,
+                      //topRightBlueCircle
+                      left: width / 5.5,
+                      bottom: width / 1.21,
                       child: Container(
-                        width: height / 1.5,
-                        height: height / 1.5,
+                        width: height / 1.4,
+                        height: height / 1.4,
                         decoration: new BoxDecoration(
                           color: Color(0xff2196f3),
                           shape: BoxShape.circle,
@@ -74,8 +76,8 @@ class RegisterView extends GetView<RegisterController> {
                           decoration: BoxDecoration(
                               boxShadow: [
                                 BoxShadow(
-                                  color: Colors.grey,
-                                  blurRadius: 8,
+                                  color: Color.fromARGB(255, 181, 179, 179),
+                                  blurRadius: 9,
                                   offset: Offset(
                                     1.0,
                                     3.0,
@@ -98,8 +100,8 @@ class RegisterView extends GetView<RegisterController> {
                                     'LOGIN',
                                     style: TextStyle(
                                       fontFamily: 'Open Sans',
-                                      letterSpacing: 1,
-                                      fontSize: 46,
+                                      letterSpacing: 1.3,
+                                      fontSize: 49,
                                       fontWeight: FontWeight.w500,
                                       color: Color(0xff1876d6),
                                     ),
@@ -133,11 +135,11 @@ class RegisterView extends GetView<RegisterController> {
                           Positioned(
                             child: Align(
                               alignment: Alignment.bottomRight,
-                              heightFactor: 0.5,
-                              widthFactor: 4.5,
+                              heightFactor: 0.45,
+                              widthFactor: 4,
                               child: Container(
-                                width: 80,
-                                height: 80,
+                                width: 85,
+                                height: 85,
                                 decoration: const BoxDecoration(
                                   color: Color(0xff2196f3),
                                   shape: BoxShape.circle,
@@ -148,15 +150,18 @@ class RegisterView extends GetView<RegisterController> {
                                       () => HomeView(),
                                     );
                                   },
-                                  icon: const Icon(Icons.arrow_forward_ios),
-                                  color: Colors.white,
+                                  icon: Icon(
+                                    Icons.arrow_forward_ios,
+                                    color: Colors.white,
+                                    size: 25,
+                                  ),
                                 ),
                               ),
                             ),
                           ),
                         ]),
                         SizedBox(
-                          height: 30,
+                          height: 35,
                         ),
                         Container(
                           height: height / 5,
@@ -168,7 +173,7 @@ class RegisterView extends GetView<RegisterController> {
                                   padding: const EdgeInsets.all(8.0),
                                   child: Text(
                                     "or Login with",
-                                    style: TextStyle(fontSize: 18),
+                                    style: TextStyle(fontSize: 19),
                                   ),
                                 ),
                                 SizedBox(
@@ -179,7 +184,7 @@ class RegisterView extends GetView<RegisterController> {
                                       color: Color(0xff1878f3),
                                       borderRadius: BorderRadius.circular(8)),
                                   width: width / 1.8,
-                                  height: width / 9,
+                                  height: width / 8.5,
                                   child: Row(children: [
                                     IconButton(
                                       onPressed: () {},
@@ -240,7 +245,7 @@ class RegisterView extends GetView<RegisterController> {
                           alignment: Alignment.bottomRight,
                           child: Container(
                               width: width / 3,
-                              height: width / 8,
+                              height: width / 6,
                               padding: EdgeInsets.fromLTRB(0, 10, 20, 0),
                               child: Align(
                                 alignment: Alignment.centerRight,
@@ -259,7 +264,7 @@ class RegisterView extends GetView<RegisterController> {
                     )),
                   ],
                 ),
-              ),
+              )
             ],
           ),
         ),

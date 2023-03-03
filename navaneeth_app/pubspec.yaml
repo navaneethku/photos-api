@@ -8,9 +8,10 @@ environment:
 dependencies: 
   cupertino_icons: ^1.0.2
   get: 4.6.5
+  font_awesome_flutter: 10.4.0
   flutter: 
     sdk: flutter
-    
+
 dev_dependencies: 
   flutter_lints: ^2.0.0
   lints: 2.0.1
@@ -18,7 +19,7 @@ dev_dependencies:
     sdk: flutter
 
 flutter: 
-  assets:
+  assets: 
     - assets/google_g.png
   uses-material-design: true
 
