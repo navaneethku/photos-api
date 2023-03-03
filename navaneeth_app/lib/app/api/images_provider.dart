@@ -1,5 +1,5 @@
 import 'package:get/get.dart';
 
-class PostsProvider extends GetConnect {
+class ImagesProvider extends GetConnect {
   Future<Response> getImages() => get('https://jsonplaceholder.typicode.com/photos');
 }
