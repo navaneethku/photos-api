@@ -1,12 +1,6 @@
-// To parse this JSON data, do
-//
-//     final imageModel = imageModelFromJson(jsonString);
-
 import 'dart:convert';
 
 List<ImageModel> imageModelFromJson(String str) => List<ImageModel>.from(json.decode(str).map((x) => ImageModel.fromJson(x)));
-
-String imageModelToJson(List<ImageModel> data) => json.encode(List<dynamic>.from(data.map((x) => x.toJson())));
 
 class ImageModel {
     ImageModel({
@@ -30,12 +24,4 @@ class ImageModel {
         url: json["url"],
         thumbnailUrl: json["thumbnailUrl"],
     );
-
-    Map<String, dynamic> toJson() => {
-        "albumId": albumId,
-        "id": id,
-        "title": title,
-        "url": url,
-        "thumbnailUrl": thumbnailUrl,
-    };
 }

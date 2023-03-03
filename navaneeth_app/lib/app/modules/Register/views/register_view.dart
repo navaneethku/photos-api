@@ -48,10 +48,10 @@ class RegisterView extends GetView<RegisterController> {
                       ),
                     ),
                     Positioned(
-                      width: 700,
-                      height: 600,
-                      bottom: -450,
-                      right: 130,
+                      width: height,
+                      height: height / 1.3,
+                      bottom: -width / 0.85,
+                      right: width / 3,
                       child: ClipOval(
                         child: Container(
                           decoration: new BoxDecoration(
@@ -98,9 +98,10 @@ class RegisterView extends GetView<RegisterController> {
                                     'LOGIN',
                                     style: TextStyle(
                                       fontFamily: 'Open Sans',
+                                      letterSpacing: 1,
                                       fontSize: 44,
                                       fontWeight: FontWeight.w500,
-                                      color: Color(0xff2196f3),
+                                      color: Color(0xff1876d6),
                                     ),
                                   ),
                                 ),
@@ -118,6 +119,7 @@ class RegisterView extends GetView<RegisterController> {
                                   child: Text(
                                     "Forgot Password?",
                                     textAlign: TextAlign.left,
+                                    style: TextStyle(fontSize: 16),
                                   ),
                                 ),
                                 // Container(child: Text("HEllo")),
@@ -135,7 +137,7 @@ class RegisterView extends GetView<RegisterController> {
                                 width: 80,
                                 height: 80,
                                 decoration: const BoxDecoration(
-                                  color: Color.fromARGB(255, 84, 174, 247),
+                                  color: Color(0xff2196f3),
                                   shape: BoxShape.circle,
                                 ),
                                 child: IconButton(
@@ -175,7 +177,7 @@ class RegisterView extends GetView<RegisterController> {
                                       color: Color(0xff1878f3),
                                       borderRadius: BorderRadius.circular(8)),
                                   width: width / 1.8,
-                                  height: width / 8,
+                                  height: width / 9,
                                   child: Row(children: [
                                     IconButton(
                                       onPressed: () {},
@@ -203,7 +205,7 @@ class RegisterView extends GetView<RegisterController> {
                                       color: Color(0xff4786eb),
                                       borderRadius: BorderRadius.circular(8)),
                                   width: width / 1.8,
-                                  height: width / 8,
+                                  height: width / 9,
                                   child: Row(children: [
                                     Image(
                                         image: AssetImage(
@@ -223,18 +225,25 @@ class RegisterView extends GetView<RegisterController> {
                                 ),
                               ]),
                         ),
-                        Container(
-                            width: width,
-                            padding: EdgeInsets.fromLTRB(0, 10, 20, 0),
-                            child: Text(
-                              'REGISTER',
-                              textAlign: TextAlign.right,
-                              style: TextStyle(
-                                  color: Color(0xff1971b8),
-                                  fontFamily: 'Open Sans',
-                                  fontSize: 21,
-                                  fontWeight: FontWeight.w500),
-                            )),
+                        Align(
+                          alignment: Alignment.bottomRight,
+                          child: Container(
+                              width: width / 3,
+                              height: width / 8,
+                              padding: EdgeInsets.fromLTRB(0, 10, 20, 0),
+                              child: Align(
+                                alignment: Alignment.centerRight,
+                                child: Text(
+                                  'REGISTER',
+                                  textAlign: TextAlign.right,
+                                  style: TextStyle(
+                                      color: Color(0xff1160b0),
+                                      fontFamily: 'Open Sans',
+                                      fontSize: 21,
+                                      fontWeight: FontWeight.w600),
+                                ),
+                              )),
+                        ),
                       ],
                     )),
                   ],

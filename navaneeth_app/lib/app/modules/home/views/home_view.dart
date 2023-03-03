@@ -61,7 +61,7 @@ class HomeView extends StatelessWidget {
                                     Padding(
                                       padding: EdgeInsets.all(14),
                                       child: Image.network("${image.url}"),
-                                    )
+                                    ),
                                   ],
                                 ),
                               ),
