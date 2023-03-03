@@ -75,10 +75,10 @@ class RegisterView extends GetView<RegisterController> {
                               boxShadow: [
                                 BoxShadow(
                                   color: Colors.grey,
-                                  blurRadius: 15.0,
+                                  blurRadius: 8,
                                   offset: Offset(
                                     1.0,
-                                    5.0,
+                                    3.0,
                                   ),
                                 )
                               ],
@@ -179,7 +179,10 @@ class RegisterView extends GetView<RegisterController> {
                                   child: Row(children: [
                                     IconButton(
                                       onPressed: () {},
-                                      icon: const Icon(Icons.facebook_rounded),
+                                      icon: const Icon(
+                                        Icons.facebook_rounded,
+                                        size: 35,
+                                      ),
                                       color: Colors.white,
                                     ),
                                     const Text(
@@ -197,7 +200,7 @@ class RegisterView extends GetView<RegisterController> {
                                 ),
                                 Container(
                                   decoration: BoxDecoration(
-                                      color: Color(0xff1878f3),
+                                      color: Color(0xff4786eb),
                                       borderRadius: BorderRadius.circular(8)),
                                   width: width / 1.8,
                                   height: width / 8,
@@ -229,7 +232,7 @@ class RegisterView extends GetView<RegisterController> {
                               style: TextStyle(
                                   color: Color(0xff1971b8),
                                   fontFamily: 'Open Sans',
-                                  fontSize: 18,
+                                  fontSize: 21,
                                   fontWeight: FontWeight.w500),
                             )),
                       ],
