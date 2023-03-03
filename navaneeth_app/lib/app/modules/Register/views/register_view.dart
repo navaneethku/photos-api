@@ -38,6 +38,7 @@ class RegisterView extends GetView<RegisterController> {
                       ),
                     ),
                     Positioned(
+                      //smalldarkBlueCircle
                       left: width / 8,
                       top: width / 7,
                       child: Container(
@@ -50,6 +51,7 @@ class RegisterView extends GetView<RegisterController> {
                       ),
                     ),
                     Positioned(
+                      //BottomLeftOval
                       width: height,
                       height: height / 1.3,
                       bottom: -width / 0.85,
@@ -126,7 +128,6 @@ class RegisterView extends GetView<RegisterController> {
                                     style: TextStyle(fontSize: 16),
                                   ),
                                 ),
-                                // Container(child: Text("HEllo")),
                               ],
                             )),
                           ),
