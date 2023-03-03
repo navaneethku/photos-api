@@ -24,11 +24,11 @@ class RegisterView extends GetView<RegisterController> {
                 child: Stack(
                   children: [
                     Positioned(
-                      left: 70,
-                      bottom: width,
+                      left: width / 5,
+                      bottom: width / 1.15,
                       child: Container(
-                        width: 500,
-                        height: 500,
+                        width: height / 1.5,
+                        height: height / 1.5,
                         decoration: new BoxDecoration(
                           color: Color(0xff2196f3),
                           shape: BoxShape.circle,
@@ -36,11 +36,11 @@ class RegisterView extends GetView<RegisterController> {
                       ),
                     ),
                     Positioned(
-                      left: 45,
-                      top: 80,
+                      left: width / 8,
+                      top: width / 7,
                       child: Container(
-                        width: 125,
-                        height: 125,
+                        width: width / 3,
+                        height: width / 3,
                         decoration: new BoxDecoration(
                           color: Color(0xff1971b8),
                           shape: BoxShape.circle,
@@ -64,12 +64,12 @@ class RegisterView extends GetView<RegisterController> {
                         child: Column(
                       children: [
                         Container(
-                          height: height / 3.2,
+                          height: height / 3.6,
                           width: width - 50,
                         ),
                         Container(
                           width: width - 20,
-                          height: height / 3,
+                          height: height / 2.9,
                           padding: EdgeInsets.fromLTRB(10, 20, 10, 10),
                           decoration: BoxDecoration(
                               boxShadow: [
@@ -99,7 +99,7 @@ class RegisterView extends GetView<RegisterController> {
                                     style: TextStyle(
                                       fontFamily: 'Open Sans',
                                       letterSpacing: 1,
-                                      fontSize: 44,
+                                      fontSize: 46,
                                       fontWeight: FontWeight.w500,
                                       color: Color(0xff1876d6),
                                     ),
@@ -107,11 +107,13 @@ class RegisterView extends GetView<RegisterController> {
                                 ),
                                 TextFormField(
                                   decoration: const InputDecoration(
-                                      labelText: "Email (Required)"),
+                                      labelText: "Email (Required)",
+                                      labelStyle: TextStyle(fontSize: 19)),
                                 ),
                                 TextFormField(
                                   decoration: const InputDecoration(
-                                      labelText: "Pasword (Required)"),
+                                      labelText: "Pasword (Required)",
+                                      labelStyle: TextStyle(fontSize: 19)),
                                 ),
                                 Container(
                                   padding: EdgeInsets.only(top: 10),
@@ -187,12 +189,17 @@ class RegisterView extends GetView<RegisterController> {
                                       ),
                                       color: Colors.white,
                                     ),
-                                    const Text(
-                                      'Login with Facebook',
-                                      textAlign: TextAlign.center,
-                                      style: TextStyle(
-                                        color: Colors.white,
-                                        fontFamily: 'Open Sans',
+                                    Container(
+                                      width: width / 2.5,
+                                      child: const Text(
+                                        'Login with Facebook',
+                                        textAlign: TextAlign.center,
+                                        style: TextStyle(
+                                          color: Colors.white,
+                                          fontFamily: 'Open Sans',
+                                          fontSize: 16,
+                                          fontWeight: FontWeight.w500,
+                                        ),
                                       ),
                                     ),
                                   ]),
@@ -211,14 +218,18 @@ class RegisterView extends GetView<RegisterController> {
                                         image: AssetImage(
                                           'assets/google_g.png',
                                         ),
-                                        height: 40),
-                                    SizedBox(width: 20),
-                                    const Text(
-                                      'Sign In with Google',
-                                      textAlign: TextAlign.center,
-                                      style: TextStyle(
-                                        color: Colors.white,
-                                        fontFamily: 'Open Sans',
+                                        height: 50),
+                                    Container(
+                                      width: width / 2.3,
+                                      child: const Text(
+                                        'Sign In with Google',
+                                        textAlign: TextAlign.center,
+                                        style: TextStyle(
+                                          color: Colors.white,
+                                          fontFamily: 'Open Sans',
+                                          fontSize: 16,
+                                          fontWeight: FontWeight.w500,
+                                        ),
                                       ),
                                     ),
                                   ]),
