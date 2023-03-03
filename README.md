@@ -2,6 +2,7 @@
 ## The Photos-API app fetches data from the [jsonplaceholder's photos](https://jsonplaceholder.typicode.com/photos) api and presents them in a dynamic list. The app uses get_cli 1.6.0 architecture.
 
 ## How to Run
+## Find the Latest APK File in the APK Folder
 ```flutter run file_name.dart```
 ## Screenshots
 ### RegisterPage
