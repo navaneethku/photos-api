@@ -4,9 +4,8 @@
 ## How to Run
 ## Find the Latest APK File in the APK Folder
 ```flutter run file_name.dart```
-## Screenshots
+## Screenshots!
 ### RegisterPage
-![Screenshot_2023_03_02_20_47_36_47_77ac996d06293de7dbe41c1abff1502e](https://user-images.githubusercontent.com/88205492/222470509-c4af1ae3-d26d-4fca-b152-323ff60a5b35.jpg)
-
+![Screenshot_1677844965](https://user-images.githubusercontent.com/88205492/222715564-d60b2797-f8a1-484a-a740-77ff7b7124e6.png)
 ### HomePage
-![Screenshot_2023_03_02_20_47_44_50_77ac996d06293de7dbe41c1abff1502e](https://user-images.githubusercontent.com/88205492/222470498-9209fdb2-1900-40da-94a9-9cda4721612c.jpg)
+![Screenshot_1677844975](https://user-images.githubusercontent.com/88205492/222715615-5b53a214-2fa2-489f-b086-736d0f8d1e83.png)
