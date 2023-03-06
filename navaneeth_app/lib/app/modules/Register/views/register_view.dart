@@ -8,29 +8,27 @@ import '../../home/views/home_view.dart';
 import '../controllers/register_controller.dart';
 
 class RegisterView extends GetView<RegisterController> {
-  double width = Get.width;
-  double height = Get.height;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: SingleChildScrollView(
         child: Container(
-          height: height,
-          width: width,
+          height: 800,
+          width: 400,
           child: Column(
             children: [
               Container(
-                height: height,
-                width: width,
+                height: 800,
+                width: 400,
                 child: Stack(
                   children: [
                     Positioned(
                       //topRightBlueCircle
-                      left: width / 5.5,
-                      bottom: width / 1.21,
+                      left: 400 / 5.5,
+                      bottom: 400 / 1.21,
                       child: Container(
-                        width: height / 1.4,
-                        height: height / 1.4,
+                        width: 800 / 1.4,
+                        height: 800 / 1.4,
                         decoration: new BoxDecoration(
                           color: Color(0xff2196f3),
                           shape: BoxShape.circle,
@@ -39,11 +37,11 @@ class RegisterView extends GetView<RegisterController> {
                     ),
                     Positioned(
                       //smalldarkBlueCircle
-                      left: width / 8,
-                      top: width / 7,
+                      left: 50,
+                      top: 61,
                       child: Container(
-                        width: width / 3,
-                        height: width / 3,
+                        width: 132,
+                        height: 132,
                         decoration: new BoxDecoration(
                           color: Color(0xff1971b8),
                           shape: BoxShape.circle,
@@ -52,10 +50,10 @@ class RegisterView extends GetView<RegisterController> {
                     ),
                     Positioned(
                       //BottomLeftOval
-                      width: height,
-                      height: height / 1.3,
-                      bottom: -width / 0.85,
-                      right: width / 3,
+                      width: 800,
+                      height: 615,
+                      bottom: -450,
+                      right: 100,
                       child: ClipOval(
                         child: Container(
                           decoration: new BoxDecoration(
@@ -68,12 +66,12 @@ class RegisterView extends GetView<RegisterController> {
                         child: Column(
                       children: [
                         Container(
-                          height: height / 3.6,
-                          width: width - 50,
+                          height: 800 / 3.6,
+                          width: 400 - 50,
                         ),
                         Container(
-                          width: width - 20,
-                          height: height / 2.9,
+                          width: 340,
+                          height: 270,
                           padding: EdgeInsets.fromLTRB(10, 20, 10, 10),
                           decoration: BoxDecoration(
                               boxShadow: [
@@ -89,15 +87,15 @@ class RegisterView extends GetView<RegisterController> {
                               color: Colors.white,
                               borderRadius: BorderRadius.circular(10)),
                           child: Container(
-                            height: height / 3,
-                            width: width - 50,
+                            height: 250,
+                            width: 200,
                             padding: EdgeInsets.symmetric(
                                 vertical: 15, horizontal: 12),
                             child: Form(
                                 child: Column(
                               children: [
                                 Container(
-                                  width: width,
+                                  width: 300,
                                   child: Text(
                                     'LOGIN',
                                     style: TextStyle(
@@ -105,23 +103,23 @@ class RegisterView extends GetView<RegisterController> {
                                       letterSpacing: 1.3,
                                       fontSize: 49,
                                       fontWeight: FontWeight.w500,
-                                      color: Color(0xff1876d6),
+                                      color: Color(0xff1676d4),
                                     ),
                                   ),
                                 ),
                                 TextFormField(
                                   decoration: const InputDecoration(
                                       labelText: "Email (Required)",
-                                      labelStyle: TextStyle(fontSize: 19)),
+                                      labelStyle: TextStyle(fontSize: 18)),
                                 ),
                                 TextFormField(
                                   decoration: const InputDecoration(
                                       labelText: "Password (Required)",
-                                      labelStyle: TextStyle(fontSize: 19)),
+                                      labelStyle: TextStyle(fontSize: 18)),
                                 ),
                                 Container(
                                   padding: EdgeInsets.only(top: 10),
-                                  width: width,
+                                  width: 400,
                                   child: Text(
                                     "Forgot Password?",
                                     textAlign: TextAlign.left,
@@ -137,24 +135,20 @@ class RegisterView extends GetView<RegisterController> {
                             child: Align(
                               alignment: Alignment.bottomRight,
                               heightFactor: 0.45,
-                              widthFactor: 4,
-                              child: Container(
-                                width: 85,
-                                height: 85,
-                                decoration: const BoxDecoration(
-                                  color: Color(0xff2196f3),
-                                  shape: BoxShape.circle,
-                                ),
-                                child: IconButton(
-                                  onPressed: () {
-                                    Get.to(
-                                      () => HomeView(),
-                                    );
-                                  },
-                                  icon: Icon(
-                                    Icons.arrow_forward_ios,
-                                    color: Colors.white,
-                                    size: 25,
+                              widthFactor: 3.5,
+                              child: GestureDetector(
+                                onTap:() => Get.to(() => HomeView()),
+                                child: Container(
+                                  width: 80,
+                                  height: 80,
+                                  decoration: const BoxDecoration(
+                                    color: Color(0xff2196f3),
+                                    shape: BoxShape.circle,
+                                  ),
+                                  child: Icon(
+                                      Icons.arrow_forward_ios,
+                                      color: Colors.white,
+                                      size: 25,
                                   ),
                                 ),
                               ),
@@ -165,8 +159,8 @@ class RegisterView extends GetView<RegisterController> {
                           height: 35,
                         ),
                         Container(
-                          height: height / 5,
-                          width: width,
+                          height: 150,
+                          width: 400,
                           child: Column(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
@@ -174,7 +168,7 @@ class RegisterView extends GetView<RegisterController> {
                                   padding: const EdgeInsets.all(8.0),
                                   child: Text(
                                     "or Login with",
-                                    style: TextStyle(fontSize: 19),
+                                    style: TextStyle(fontSize: 18),
                                   ),
                                 ),
                                 SizedBox(
@@ -184,8 +178,8 @@ class RegisterView extends GetView<RegisterController> {
                                   decoration: BoxDecoration(
                                       color: Color(0xff1878f3),
                                       borderRadius: BorderRadius.circular(8)),
-                                  width: width / 1.8,
-                                  height: width / 8.5,
+                                  width: 400 / 1.8,
+                                  height: 400 / 8.5,
                                   child: Row(children: [
                                     IconButton(
                                       onPressed: () {},
@@ -196,7 +190,7 @@ class RegisterView extends GetView<RegisterController> {
                                       color: Colors.white,
                                     ),
                                     Container(
-                                      width: width / 2.5,
+                                      width: 400 / 2.5,
                                       child: const Text(
                                         'Login with Facebook',
                                         textAlign: TextAlign.center,
@@ -211,14 +205,14 @@ class RegisterView extends GetView<RegisterController> {
                                   ]),
                                 ),
                                 SizedBox(
-                                  height: 10,
+                                  height: 8,
                                 ),
                                 Container(
                                   decoration: BoxDecoration(
                                       color: Color(0xff4786eb),
                                       borderRadius: BorderRadius.circular(8)),
-                                  width: width / 1.8,
-                                  height: width / 9,
+                                  width: 400 / 1.8,
+                                  height: 400 / 9,
                                   child: Row(children: [
                                     Image(
                                         image: AssetImage(
@@ -226,7 +220,7 @@ class RegisterView extends GetView<RegisterController> {
                                         ),
                                         height: 50),
                                     Container(
-                                      width: width / 2.3,
+                                      width: 400 / 2.3,
                                       child: const Text(
                                         'Sign In with Google',
                                         textAlign: TextAlign.center,
@@ -245,16 +239,16 @@ class RegisterView extends GetView<RegisterController> {
                         Align(
                           alignment: Alignment.bottomRight,
                           child: Container(
-                              width: width / 3,
-                              height: width / 6,
+                              width: 150,
+                              height: 50,
                               padding: EdgeInsets.fromLTRB(0, 10, 20, 0),
                               child: Align(
-                                alignment: Alignment.centerRight,
+                                alignment: Alignment.bottomRight,
                                 child: Text(
                                   'REGISTER',
-                                  textAlign: TextAlign.right,
+                                  textAlign: TextAlign.center,
                                   style: TextStyle(
-                                      color: Color(0xff1160b0),
+                                      color: Color(0xff185ca2),
                                       fontFamily: 'Open Sans',
                                       fontSize: 21,
                                       fontWeight: FontWeight.w600),
