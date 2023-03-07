@@ -137,7 +137,7 @@ class RegisterView extends GetView<RegisterController> {
                               heightFactor: 0.45,
                               widthFactor: 3.5,
                               child: GestureDetector(
-                                onTap:() => Get.to(() => HomeView()),
+                                onTap: () => Get.to(() => HomeView()),
                                 child: Container(
                                   width: 80,
                                   height: 80,
@@ -145,10 +145,11 @@ class RegisterView extends GetView<RegisterController> {
                                     color: Color(0xff2196f3),
                                     shape: BoxShape.circle,
                                   ),
-                                  child: Icon(
-                                      Icons.arrow_forward_ios,
-                                      color: Colors.white,
-                                      size: 25,
+                                  child: IconButton(
+                                    icon: Icon(Icons.arrow_forward_ios),
+                                    onPressed: () => Get.to(() => HomeView()),
+                                    color: Colors.white,
+                                    iconSize: 25,
                                   ),
                                 ),
                               ),
@@ -240,7 +241,7 @@ class RegisterView extends GetView<RegisterController> {
                           alignment: Alignment.bottomRight,
                           child: Container(
                               width: 150,
-                              height: 50,
+                              height: 60,
                               padding: EdgeInsets.fromLTRB(0, 10, 20, 0),
                               child: Align(
                                 alignment: Alignment.bottomRight,
