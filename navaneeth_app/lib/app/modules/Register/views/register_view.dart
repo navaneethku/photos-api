@@ -70,7 +70,8 @@ class RegisterView extends GetView<RegisterController> {
                           width: 400 - 50,
                         ),
                         Container(
-                          width: 340,
+                          margin: EdgeInsets.fromLTRB(10, 0, 10, 0),
+                          width: Get.width,
                           height: 270,
                           padding: EdgeInsets.fromLTRB(10, 20, 10, 10),
                           decoration: BoxDecoration(
